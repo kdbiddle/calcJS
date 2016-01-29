@@ -16,10 +16,13 @@ $(document).ready(function(){
 
     function divideNumbers(a,b) {
         return a/b;
-    }
+    };
 
+    function displayEquation () {
+        $(".btn").click(function(){
+            $("#display").html($(this).text());
+        });
+    };
 
-    $(".btn").click(function() {
-        $("#display").text($(this).val());
-    });
+    displayEquation();
 });
