@@ -20,7 +20,7 @@ $(document).ready(function(){
 
     function displayEquation () {
         $(".btn").click(function(){
-            $("#display").html($(this).text());
+            $("#display").append($(this).text());
         });
     };
 
