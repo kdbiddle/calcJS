@@ -1,6 +1,7 @@
 $(document).ready(function(){
     var numberInput = [];
     var operation;
+    var buttonIDs = [0, 1, "2", 3, 4, 5, 6, 7, 8, 9, "clear", "+", "-", "*", "/"]
 
     function addNumbers(a,b) {
         return a+b;
@@ -24,9 +25,11 @@ $(document).ready(function(){
         });
     };
 
-    document.getElementById("7").addEventListener("click", function(){
-        document.getElementById("display").innerHTML = this.getAttribute("value");
-    });
+    for (id in buttonIDs) {
+        document.getElementById(id).addEventListener("click", function(){
+            document.getElementById("display").innerHTML += this.getAttribute("value");
+        });
+    };
 
     //displayEquation();
 });
