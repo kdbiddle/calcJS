@@ -24,5 +24,9 @@ $(document).ready(function(){
         });
     };
 
-    displayEquation();
+    document.getElementById("7").addEventListener("click", function(){
+        document.getElementById("display").innerHTML = this.getAttribute("value");
+    });
+
+    //displayEquation();
 });
