@@ -21,22 +21,22 @@ $(document).ready(function(){
 
     function displayEquation () {
         $(".btn").click(function(){
-            $("#display").append($(this).text());
+            $("#display").append($(this).val());
         });
     };
 
     //console.log(document.getElementById("clear").value());
 
-    for (var i=0; i<buttonIDs.length; i++) {
-        var buttonPushed = document.getElementById(i);
+    /*for (id in buttonIDs) {
+        var buttonPushed = document.getElementById(id);
         buttonPushed.addEventListener("click", function(){
             console.log(buttonPushed);
             if (buttonPushed.getAttribute("value") < 9) {
             document.getElementById("display").innerHTML += this.getAttribute("value");
         }
         });
-    };
+    };*/
 
 
-    //displayEquation();
+    displayEquation();
 });
