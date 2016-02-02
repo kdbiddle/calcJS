@@ -21,7 +21,11 @@ $(document).ready(function(){
 
     function displayEquation () {
         $(".num").click(function(){
-            $("#display").append($(this).val());
+            if ($(this).val() < 6) {
+                $("#display").append($(this).val());
+            } else {
+                console.log($(this).val());
+            };
         });
     };
 
