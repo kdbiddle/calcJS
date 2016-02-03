@@ -21,9 +21,9 @@ $(document).ready(function(){
 
     function displayEquation () {
         $(".num").click(function(){
-            if ($(this).val() < 6) {
+            if ($(this).val() < 9) {
                 $("#display").append($(this).val());
-            } else {
+            } else if ($(this).text() === "C" ) {
                 console.log($(this).val());
             };
         });
