@@ -5,11 +5,11 @@ $(document).ready(function(){
 
     function addNumbers(a,b) {
         return a+b;
-    }
+    };
 
     function subtractNumbers(a,b) {
         return a-b;
-    }
+    };
 
     function multiplyNumbers(a,b){
         return a*b;
@@ -20,11 +20,11 @@ $(document).ready(function(){
     };
 
     function displayEquation () {
-        $(".num").click(function(){
+        $(".btn").click(function(){
             if ($(this).val() < 9) {
                 $("#display").append($(this).val());
-            } else if ($(this).text() === "C" ) {
-                console.log($(this).val());
+            } else if ($(this).hasClass("operator")) {
+                console.log("operator");
             };
         });
     };
