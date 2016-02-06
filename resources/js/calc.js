@@ -21,10 +21,10 @@ $(document).ready(function(){
 
     function displayEquation () {
         $(".btn").click(function(){
-            if ($(this).val() < 9) {
+            if ($(this).hasClass("num") || $(this).hasClass("operator")) {
                 $("#display").append($(this).val());
-            } else if ($(this).hasClass("operator")) {
-                console.log("operator");
+            } else {
+                console.log("not an operator or number!");
             };
         });
     };
