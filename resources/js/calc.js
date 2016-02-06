@@ -23,8 +23,8 @@ $(document).ready(function(){
         $(".btn").click(function(){
             if ($(this).hasClass("num") || $(this).hasClass("operator")) {
                 $("#display").append($(this).val());
-            } else {
-                console.log("not an operator or number!");
+            } else if ($(this).val() === "clear") {
+                $("#display").text("");
             };
         });
     };
