@@ -1,4 +1,5 @@
 $(document).ready(function(){
+var calc = {};
     var numberInput = [];
     var operation;
     var buttonIDs = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -19,7 +20,7 @@ $(document).ready(function(){
         return a/b;
     };
 
-    function displayEquation () {
+    calc.display = function() {
         $(".btn").click(function(){
             if ($(this).hasClass("num") || $(this).hasClass("operator")) {
                 $("#display").append($(this).val());
@@ -42,5 +43,5 @@ $(document).ready(function(){
     };*/
 
 
-    displayEquation();
+    calc.display();
 });
