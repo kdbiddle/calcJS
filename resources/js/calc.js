@@ -24,7 +24,13 @@ var calc = {};
         $(".btn").click(function(){
             if ($(this).hasClass("num") || $(this).hasClass("operator")) {
                 $("#display").append($(this).val());
-            } else if ($(this).val() === "clear") {
+            };
+        });
+    };
+
+    calc.clear = function() {
+        $(".btn").click(function(){
+            if ($(this).val() === "clear") {
                 $("#display").text("");
             };
         });
@@ -44,4 +50,5 @@ var calc = {};
 
 
     calc.display();
+    calc.clear();
 });
