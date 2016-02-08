@@ -20,9 +20,17 @@ var calc = {};
         return a/b;
     };
 
-    calc.display = function() {
+    calc.displayNum = function() {
         $(".btn").click(function(){
-            if ($(this).hasClass("num") || $(this).hasClass("operator")) {
+            if ($(this).hasClass("num")) {
+                $("#display").append($(this).val());
+            };
+        });
+    };
+
+    calc.operation = function() {
+        $(".btn").click(function(){
+            if ($(this).hasClass("operator")) {
                 $("#display").append($(this).val());
             };
         });
@@ -36,19 +44,11 @@ var calc = {};
         });
     };
 
-    //console.log(document.getElementById("clear").value());
+    calc.equals = function() {
 
-    /*for (id in buttonIDs) {
-        var buttonPushed = document.getElementById(id);
-        buttonPushed.addEventListener("click", function(){
-            console.log(buttonPushed);
-            if (buttonPushed.getAttribute("value") < 9) {
-            document.getElementById("display").innerHTML += this.getAttribute("value");
-        }
-        });
-    };*/
+    };
 
-
-    calc.display();
+    calc.displayNum();
+    calc.operation();
     calc.clear();
 });
