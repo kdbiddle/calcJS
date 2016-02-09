@@ -2,7 +2,6 @@ $(document).ready(function(){
 var calc = {};
     var numberInput = [];
     var operation;
-    var buttonIDs = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
     function addNumbers(a,b) {
         return a+b;
@@ -21,18 +20,14 @@ var calc = {};
     };
 
     calc.displayNum = function() {
-        $(".btn").click(function(){
-            if ($(this).hasClass("num")) {
-                $("#display").append($(this).val());
-            };
+        $(".num").click(function(){
+            $("#display").append($(this).val());
         });
     };
 
     calc.operation = function() {
-        $(".btn").click(function(){
-            if ($(this).hasClass("operator")) {
-                $("#display").append($(this).val());
-            };
+        $(".operator").click(function(){
+            $("#display").append($(this).val());
         });
     };
 
