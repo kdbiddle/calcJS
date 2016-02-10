@@ -32,10 +32,8 @@ var calc = {};
     };
 
     calc.clear = function() {
-        $(".btn").click(function(){
-            if ($(this).val() === "clear") {
-                $("#display").text("");
-            };
+        $("#clear").click(function(){
+            $("#display").text("");
         });
     };
 
