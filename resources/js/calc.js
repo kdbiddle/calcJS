@@ -38,10 +38,14 @@ var calc = {};
     };
 
     calc.equals = function() {
-
+        $("#equals").click(function(){
+            var solution = $("#display").text();
+            console.log(parseInt(solution));
+        });
     };
 
     calc.displayNum();
     calc.operation();
     calc.clear();
+    calc.equals();
 });
